@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Modelos 3D no Blender</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ccff;
+      font-size: 26px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #ff9900;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .model-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .model {
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 15px;
+      color: #888;
+      border-top: 2px solid #444;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #00ccff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      border: 3px solid #008cff;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .contact-btn:hover {
+      background-color: #0099cc;
+      color: #fff;
+    }
+
+    .contact-btn:active {
+      background-color: #008cff;
+      color: #fff;
+    }
+
+    .contact-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #00ccff80;
+    }
+
+    @media (min-width: 768px) {
+      .model-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      .model {
+        min-width: 300px;
+        max-width: 400px;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Modelos 3D - Blender</h1>
+    <nav>
+      <a href="#modelos">Portfólio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="container" id="modelos">
+    <h2>Modelos Recentes</h2>
+    <div class="model-wrapper">
+          <div class="model" data-model-id="9ab53b4e9c9044d485c71a4782fae4c7">
+        <h3 class="auto-title">Carregando nome...</h3>
+        <iframe src="https://sketchfab.com/models/9ab53b4e9c9044d485c71a4782fae4c7/embed"></iframe>
+      </div>
+      
+      <div class="model" data-model-id="65110b3dfccb406194253a29f1854942">
+        <h3 class="auto-title">Carregando nome...</h3>
+        <iframe src="https://sketchfab.com/models/65110b3dfccb406194253a29f1854942/embed"></iframe>
+      </div>
+
+      <div class="model" data-model-id="f326fb60e4764d79858a273ac2abc245">
+        <h3 class="auto-title">Carregando nome...</h3>
+        <iframe src="https://sketchfab.com/models/f326fb60e4764d79858a273ac2abc245/embed"></iframe>
+      </div>
+
+  
+
+      <!-- Exemplo de mais modelos -->
+      <div class="model" data-model-id="SEU_MODEL_ID_AQUI">
+        <h3 class="auto-title">Carregando nome...</h3>
+        <iframe src="https://sketchfab.com/models/SEU_MODEL_ID_AQUI/embed"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const models = document.querySelectorAll(".model");
+
+      models.forEach(model => {
+        const modelId = model.getAttribute("data-model-id");
+        const titleEl = model.querySelector(".auto-title");
+
+        fetch(`https://api.sketchfab.com/v3/models/${modelId}`)
+          .then(res => res.json())
+          .then(data => {
+            titleEl.textContent = data.name || "Modelo sem nome";
+          })
+          .catch(err => {
+            titleEl.textContent = "Erro ao carregar nome";
+            console.error("Erro:", err);
+          });
+      });
+    });
+  </script>
+
+  <div class="container" id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou artista 3D especializado em Blender. Crio modelos otimizados e bem trabalhados para jogos interativos. Posso entregar em formatos .blend, .fbx e .obj.</p>
+  </div>
+
+  <div class="container" id="contato">
+    <h2>Contato</h2>
+    <p>Quer trabalhar comigo ou comprar um modelo? Me chama!</p>
+    <a href="mailto:LazaroGamer022@outook.com" class="contact-btn">Enviar E-mail</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Criado por LazaroGamerYT3
+  </footer>
+
+</body>
+</html>
