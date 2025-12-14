@@ -22,28 +22,37 @@
     <div class="model-wrapper" id="models-container">
       <p>Carregando modelos...</p>
     </div>
-</div>
+  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const models = document.querySelectorAll(".model");
+<script>
+  const USERNAME = "SEU_USUARIO_DO_SKETCHFAB"; // ex: LazaroGamerYT3
+  const container = document.getElementById("models-container");
 
-      models.forEach(model => {
-        const modelId = model.getAttribute("data-model-id");
-        const titleEl = model.querySelector(".auto-title");
+  fetch(`https://api.sketchfab.com/v3/users/${USERNAME}/models?sort_by=-publishedAt`)
+    .then(res => res.json())
+    .then(data => {
+      container.innerHTML = "";
 
-        fetch(`https://api.sketchfab.com/v3/models/${modelId}`)
-          .then(res => res.json())
-          .then(data => {
-            titleEl.textContent = data.name || "Modelo sem nome";
-          })
-          .catch(err => {
-            titleEl.textContent = "Erro ao carregar nome";
-            console.error("Erro:", err);
-          });
+      data.results.forEach(model => {
+        const div = document.createElement("div");
+        div.className = "model";
+
+        div.innerHTML = `
+          <h3>${model.name}</h3>
+          <iframe 
+            src="https://sketchfab.com/models/${model.uid}/embed"
+            allowfullscreen>
+          </iframe>
+        `;
+
+        container.appendChild(div);
       });
+    })
+    .catch(err => {
+      container.innerHTML = "Erro ao carregar modelos.";
+      console.error(err);
     });
-  </script>
+</script>
 
   <div class="container" id="sobre">
     <h2>Sobre Mim</h2>
