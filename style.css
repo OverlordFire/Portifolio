@@ -1,2 +1,112 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
+    header h1 {
+      margin: 0;
+      color: #00ccff;
+      font-size: 26px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #ff9900;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .model-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .model {
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 15px;
+      color: #888;
+      border-top: 2px solid #444;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #00ccff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      border: 3px solid #008cff;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .contact-btn:hover {
+      background-color: #0099cc;
+      color: #fff;
+    }
+
+    .contact-btn:active {
+      background-color: #008cff;
+      color: #fff;
+    }
+
+    .contact-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #00ccff80;
+    }
+
+    @media (min-width: 768px) {
+      .model-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      .model {
+        min-width: 300px;
+        max-width: 400px;
+        flex-shrink: 0;
+      }
+    }
