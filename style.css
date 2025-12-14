@@ -41,7 +41,8 @@
       padding: 30px 20px;
     }
 
-    .model-wrapper::-webkit-scrollbar-button {
+    .model-wrapper{
+      background: #1a1a1a;
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
