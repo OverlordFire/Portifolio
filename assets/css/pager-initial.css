@@ -1,0 +1,191 @@
+
+/* ===== Hero Section ===== */
+.hero {
+    width: 100%;
+    min-height: 500px;
+    background-color: #205a9d;
+    display: block; /* não centraliza o container */
+    padding: 20px 0; /* espaço vertical */
+    margin-top: 0;
+}
+.divider-1 {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #a156d0;
+    overflow: hidden;
+}
+
+.layered-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.hero-1 {
+    width: 100%;
+    min-height: 500px;
+    background-color: #a156d0;
+    display: block; /* não centraliza o container */
+    padding: 20px 0; /* espaço vertical */
+}
+
+.divider-2 {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #27232a;
+    overflow: hidden;
+}
+
+.layered-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.hero-2 {
+    width: 100%;
+    min-height: 500px;
+    background-color: #27232a;
+    display: block; /* não centraliza o container */
+    padding: 20px 0; /* espaço vertical */
+}
+/* ===== Container / Categoria Recentes ===== */
+.container {
+    background-color: #205a9d; /* fundo que envolve tudo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0;
+    display: inline-block; 
+}
+.ver-todos {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff;
+    transition: 0.3s;
+    display: inline-block; 
+    cursor: pointer;
+    float: right; /* coloca à direita dentro do container */
+    margin-top: 4px; /* ajuste fino de alinhamento vertical */
+}
+
+.ver-todos:hover {
+    color: #ff9900;
+}
+/* ===== Container / Categoria Jogos ===== */
+.container-1 {
+    background-color: #a156d0; /* fundo que envolve tudo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container-1 h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0;
+    display: inline-block; 
+}
+/* ===== Container / Sobre ===== */
+.container-2 {
+    background-color: #27232a; /* fundo que envolve tudo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+.model-wrapper {
+    display: flex;           /* coloca os modelos lado a lado */
+    flex-direction: row;     /* horizontal */
+    flex-wrap: nowrap;       /* não quebra linha */
+    overflow-x: auto;        /* scroll horizontal */
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* scroll invisível */
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;      /* Firefox */
+}
+.model-wrapper::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari e Edge */
+}
+.model {
+    flex: 0 0 300px;          /* largura fixa para cada modelo */
+    background-color: #2d65a5;
+    padding: 20px;
+    text-align: center;
+}
+.model h3,
+.jogo h3 {
+    color: #ffffff;   /* cor dos títulos dos modelos */
+    font-size: 20px;  /* tamanho menor */
+    margin-bottom: 10px;
+}
+    
+iframe {
+    width: 100%;
+    height: 320px;
+    border: none;
+    border-radius: 4px;
+}
+@media (min-width: 730px) {
+    .model-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .model {
+        min-width: 300px;
+        max-width: 400px;
+        flex-shrink: 0;
+    }
+}
+.jogo {
+    flex: 0 0 300px;          /* largura fixa para cada jogo */
+    background-color: #8a49b2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.jogo-link {
+    position: relative;
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.jogo-thumb {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/* overlay jogar */
+.jogar-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    color: #e0d2e3;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.jogo-link:hover .jogar-overlay {
+    opacity: 1;
+}
