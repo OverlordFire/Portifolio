@@ -72,18 +72,24 @@
 }
 .ver-todos {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     color: #ffffff;
-    transition: 0.3s;
-    display: inline-block; 
-    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #ffffff1a;
+    backdrop-filter: blur(10px);
     float: right; /* coloca à direita dentro do container */
-    margin-top: 4px; /* ajuste fino de alinhamento vertical */
+    margin-top: -3px;
 }
 
 .ver-todos:hover {
-    color: #ff9900;
+  background: #ffffff33;
+  transform: scale(1.05);
+  color: #ff9900;
 }
+
 /* ===== Container / Categoria Jogos ===== */
 .container-1 {
     background-color: #a156d0; /* fundo que envolve tudo */
@@ -123,19 +129,27 @@
     background-color: #2d65a5;
     padding: 20px;
     text-align: center;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
 }
+
 .model h3,
 .jogo h3 {
     color: #ffffff;   /* cor dos títulos dos modelos */
     font-size: 20px;  /* tamanho menor */
     margin-bottom: 10px;
 }
-    
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 200;
+}
 iframe {
     width: 100%;
     height: 320px;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px;         
 }
 @media (min-width: 730px) {
     .model-wrapper {
@@ -154,9 +168,12 @@ iframe {
     background-color: #8a49b2;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 8px;
 
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
 }
+
 
 .jogo-link {
     position: relative;
@@ -171,12 +188,24 @@ iframe {
     object-fit: cover;
     display: block;
 }
-
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #4e4e4e57;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 /* overlay jogar */
 .jogar-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: #0000008c;
     color: #e0d2e3;
     font-size: 26px;
     font-weight: bold;
@@ -188,4 +217,8 @@ iframe {
 }
 .jogo-link:hover .jogar-overlay {
     opacity: 1;
+}
+.model:hover, .jogo:hover {
+  transform: scale(1.025);   /* aumenta só um pouquinho */
+  box-shadow: 0 3px 3px #00000040;
 }
