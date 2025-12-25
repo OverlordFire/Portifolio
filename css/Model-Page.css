@@ -65,7 +65,7 @@ iframe {
 
 @media (max-width: 730px) {
     .model-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     .container h2{
         font-size: 22px;
@@ -75,6 +75,7 @@ iframe {
     }
 
 }
+
 
 
 
