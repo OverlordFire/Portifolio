@@ -67,14 +67,15 @@ iframe {
     .model-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
-    .container h2 
+    .container h2{
         font-size: 22px;
     }
     .model h3 {
-        font-size: 10px;
+        font-size: 14px;
     }
 
 }
+
 
 
 
