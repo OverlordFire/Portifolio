@@ -154,14 +154,14 @@ iframe {
 @media (min-width: 730px) {
     .container h2,
     .container-1 h2{
-        font-size: 22px;
+        font-size: 18px;
     }
     .description {
-        font-size: 14px;
+        font-size: 12px;
     }
     .ver-todos {
-        font-size: 14px;
-        padding: 6px 12px;
+        font-size: 12px;
+        padding: 6px 10px;
     }
     .model-wrapper {
         flex-wrap: nowrap;
@@ -233,4 +233,5 @@ iframe {
   transform: scale(1.025);   /* aumenta só um pouquinho */
   box-shadow: 0 3px 3px #00000040;
 }
+
 
