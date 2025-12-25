@@ -27,7 +27,8 @@
 }
 .hero-1 {
     width: 100%;
-    min-height: 500px;
+    height: auto;          /* altura se ajustar ao conteúdo */
+    min-height: 500px; 
     background-color: #a156d0;
     display: block; /* não centraliza o container */
     padding: 20px 0; /* espaço vertical */
@@ -52,7 +53,8 @@
 }
 .hero-2 {
     width: 100%;
-    min-height: 500px;
+    height: auto;          
+    min-height: 500px; 
     background-color: #27232a;
     display: block; /* não centraliza o container */
     padding: 20px 0; /* espaço vertical */
@@ -230,12 +232,22 @@ iframe {
     }
     .model,
     .jogo {
-        min-width: 30px;
+        min-width: 300px;
         max-width: 400px;
         flex-shrink: 0;  
+    }
+    .model iframe,
+    .jogo-thumb {
+        width: 100%;
+        height: 250px;
     }
     .model h3,
     .jogo h3 {
         font-size: 15px;
+    }
+    .hero,
+    .hero-1 {
+        height: auto;
+        min-height: 300px; 
     }
 }
