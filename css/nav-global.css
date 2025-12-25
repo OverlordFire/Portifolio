@@ -64,6 +64,9 @@ header{
     .nav-list {
         display: none;
     }
+    .logo img {
+        height: 35px;
+    }
     .mobile-menu-icon{
         display: block;
     }
