@@ -59,7 +59,7 @@ header{
 }
 @media screen and (max-width: 730px) {
     .nav-bar{
-        padding: 5px 1.5rem;
+        padding: 8px 1rem;
     }
     .nav-list {
         display: none;
