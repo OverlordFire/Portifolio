@@ -65,7 +65,8 @@ header{
         display: none;
     }
     .logo img {
-        height: 35px;
+        height: clamp(32px, 6vw, 50px);
+        width: auto;
     }
     .mobile-menu-icon{
         display: block;
