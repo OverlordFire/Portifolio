@@ -152,11 +152,22 @@ iframe {
     border-radius: 4px;         
 }
 @media (min-width: 730px) {
+    .container h2,
+    .container-1 h2{
+        font-size: 22px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .ver-todos {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
     .model-wrapper {
         flex-wrap: nowrap;
         overflow-x: auto;
     }
-
+    
     .model {
         min-width: 300px;
         max-width: 400px;
@@ -222,3 +233,4 @@ iframe {
   transform: scale(1.025);   /* aumenta só um pouquinho */
   box-shadow: 0 3px 3px #00000040;
 }
+
