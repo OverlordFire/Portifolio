@@ -66,18 +66,18 @@
 
 .container h2 {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 20px;
     margin: 0;
     display: inline-block; 
 }
 .ver-todos {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
     background: #ffffff1a;
     backdrop-filter: blur(10px);
     float: right; /* coloca à direita dentro do container */
@@ -99,7 +99,7 @@
 
 .container-1 h2 {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 20px;
     margin: 0;
     display: inline-block; 
 }
@@ -137,12 +137,12 @@
 .model h3,
 .jogo h3 {
     color: #ffffff;   /* cor dos títulos dos modelos */
-    font-size: 20px;  /* tamanho menor */
+    font-size: 14px;  /* tamanho menor */
     margin-bottom: 10px;
 }
 .description {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
 }
 iframe {
@@ -151,29 +151,7 @@ iframe {
     border: none;
     border-radius: 4px;         
 }
-@media (min-width: 730px) {
-    .container h2,
-    .container-1 h2{
-        font-size: 18px;
-    }
-    .description {
-        font-size: 12px;
-    }
-    .ver-todos {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-    .model-wrapper {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-    
-    .model {
-        min-width: 300px;
-        max-width: 400px;
-        flex-shrink: 0;
-    }
-}
+
 .jogo {
     flex: 0 0 300px;          /* largura fixa para cada jogo */
     background-color: #8a49b2;
@@ -232,6 +210,34 @@ iframe {
 .model:hover, .jogo:hover {
   transform: scale(1.025);   /* aumenta só um pouquinho */
   box-shadow: 0 3px 3px #00000040;
+}
+@media (min-width: 730px) {
+    .container h2,
+    .container-1 h2{
+        font-size: 28px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .model h3,
+    .jogo h3 {
+        font-size: 20px;
+    }
+    .ver-todos {
+        font-size: 16px;
+        padding: 8px 14px;
+        border-radius: 8px;
+    }
+    .model-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    
+    .model {
+        min-width: 300px;
+        max-width: 400px;
+        flex-shrink: 0;
+    }
 }
 
 
