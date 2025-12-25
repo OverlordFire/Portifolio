@@ -38,7 +38,7 @@
 
 .model-wrapper {
     display: grid;           /* coloca os modelos lado a lado */
-    grid-template-columns: repeat(3, 1fr); /* 5 por linha */
+    grid-template-columns: repeat(4, 1fr); /* 5 por linha */
     gap: 10px;       
     padding: 10px;
     box-sizing: border-box;
@@ -69,4 +69,5 @@ iframe {
     }
 
 }
+
 
