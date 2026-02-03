@@ -10,25 +10,3 @@ function menuShow() {
     }
 
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const models = document.querySelectorAll(".model");
-
-    models.forEach(model => {
-    const modelId = model.getAttribute("data-model-id");
-    const titleEl = model.querySelector(".auto-title");
-
-    fetch(`https://api.sketchfab.com/v3/models/${modelId}`)
-        .then(res => res.json())
-        .then(data => {
-        titleEl.textContent = data.name || "Modelo sem nome";
-        })
-        .catch(err => {
-        titleEl.textContent = "Erro ao carregar nome";
-        console.error("Erro:", err);
-        });
-    });
-});
-
-
-

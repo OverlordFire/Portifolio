@@ -59,14 +59,10 @@ header{
 }
 @media screen and (max-width: 730px) {
     .nav-bar{
-        padding: 8px 1rem;
+        padding: 5px 1.5rem;
     }
     .nav-list {
         display: none;
-    }
-    .logo img {
-        height: clamp(32px, 6vw, 50px);
-        width: auto;
     }
     .mobile-menu-icon{
         display: block;
@@ -95,7 +91,10 @@ header{
         width: 100%;
 
     }
-  
+    .logo img {
+        height: 35px; /* diminui um pouco */
+    }
+    
 }
 /* ===== Divider / Linha decorativa ===== */
 .divider {
