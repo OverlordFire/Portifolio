@@ -272,7 +272,7 @@ model-viewer {
     height: auto;
     aspect-ratio: 4 / 3;
     touch-action: pan-y;
-    --interaction-prompt: "true";
+    --interaction-prompt: 1;
   }
       
 }
