@@ -12,25 +12,29 @@ function menuShow() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.querySelectorAll(".model").forEach(card => {
 
-  document.querySelectorAll(".model").forEach(card => {
+  const viewer = card.querySelector("model-viewer");
+  const title = card.querySelector(".auto-title");
 
-    const viewer = card.querySelector("model-viewer");
-    const title = card.querySelector(".auto-title");
+  if (!viewer || !title) return;
 
-    if (!viewer || !title) return;
+  // pega o caminho do src
+  let file = viewer.getAttribute("src");
 
-    let file = viewer.getAttribute("src");
+  // pega só o nome do arquivo
+  file = file.split("/").pop();
 
-    if (!file) return;
+  // remove extensão
+  file = file.replace(".glb", "");
 
-    file = file.split("/").pop();
-    file = file.replace(".glb", "");
-    file = file.replace(/_/g, " ");
-    file = file.replace(/\b\w/g, l => l.toUpperCase());
+  // troca underline por espaço
+  file = file.replace(/_/g, " ");
 
-    title.textContent = file;
-  });
+  // capitaliza cada palavra
+  file = file.replace(/\b\w/g, l => l.toUpperCase());
+
+  // coloca no h3
+  title.textContent = file;
+
 });
-
