@@ -164,6 +164,16 @@ model-viewer {
   background-repeat: no-repeat;
 }
 
+.viewer-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 .jogo {
     flex: 0 0 300px; 
     background-color: #8a49b2;
@@ -280,6 +290,7 @@ model-viewer {
       
 
 }
+
 
 
 
