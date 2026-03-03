@@ -159,7 +159,6 @@ model-viewer {
   border: none;
   border-radius: 4px;
   background-image: url("https://picsum.photos/600/400");
-  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -281,6 +280,7 @@ model-viewer {
       
 
 }
+
 
 
 
