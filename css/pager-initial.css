@@ -159,7 +159,6 @@ model-viewer {
   border: none;
   border-radius: 4px;
   
-  background-image: url('/img/fundo-preto-dos-modelos-3d.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -281,5 +280,6 @@ model-viewer {
       
 
 }
+
 
 
