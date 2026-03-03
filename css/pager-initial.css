@@ -158,7 +158,11 @@ model-viewer {
   height: 320px;
   border: none;
   border-radius: 4px;
-  background-color: #76778b;
+    
+  background-image: url("../img/fundo-preto-dos-modelos-3d.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .jogo {
@@ -275,4 +279,5 @@ model-viewer {
     --interaction-prompt: 1;
   }
       
+
 }
