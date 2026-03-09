@@ -25,7 +25,7 @@ fetch("js/model.json")
 
     let limite = models.length;
 
-    if(pagina.includes("index")) {
+    if(pagina.includes("index.html")) {
         limite = 7; // index mostra só 7
     }
 
@@ -50,5 +50,6 @@ fetch("js/model.json")
         container.appendChild(div);
 
     });
+
 
 });
