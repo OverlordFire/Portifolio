@@ -11,30 +11,44 @@ function menuShow() {
 
 }
 
+fetch("js/model.json")
+.then(response => response.json())
+.then(models => {
 
-document.querySelectorAll(".model").forEach(card => {
+    const container = document.getElementById("models-container");
 
-  const viewer = card.querySelector("model-viewer");
-  const title = card.querySelector(".auto-title");
+    // ordenar do mais recente para o mais antigo
+    models.sort((a,b) => b.id - a.id);
 
-  if (!viewer || !title) return;
+    // detectar qual página está aberta
+    const pagina = window.location.pathname;
 
-  // pega o caminho do src
-  let file = viewer.getAttribute("src");
+    let limite = models.length;
 
-  // pega só o nome do arquivo
-  file = file.split("/").pop();
+    if(pagina.includes("index")) {
+        limite = 7; // index mostra só 7
+    }
 
-  // remove extensão
-  file = file.replace(".glb", "");
+    models.slice(0, limite).forEach(model => {
 
-  // troca underline por espaço
-  file = file.replace(/_/g, " ");
+        const div = document.createElement("div");
+        div.className = "model";
 
-  // capitaliza cada palavra
-  file = file.replace(/\b\w/g, l => l.toUpperCase());
+        div.innerHTML = `
+            <h3>${model.nome}</h3>
+            <model-viewer 
+                class="model-3D"
+                alt="${model.nome}"
+                src="models/${model.arquivo}"
+                autoplay
+                camera-controls
+                interaction-prompt="none"
+                disable-zoom>
+            </model-viewer>
+        `;
 
-  // coloca no h3
-  title.textContent = file;
+        container.appendChild(div);
+
+    });
 
 });
