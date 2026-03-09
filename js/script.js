@@ -25,8 +25,8 @@ fetch("js/model.json")
 
     let limite = models.length;
 
-    if(pagina.includes("index.html")) {
-        limite = 7; // index mostra só 7
+    if (pagina === "/" || pagina.endsWith("index.html")) {
+    limite = 7;
     }
 
     models.slice(0, limite).forEach(model => {
@@ -53,3 +53,4 @@ fetch("js/model.json")
 
 
 });
+
