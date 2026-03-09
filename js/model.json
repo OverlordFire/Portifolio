@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nome": "Frosty Essence Sword",
+    "arquivo": "frosty_essence_sword.glb"
+  },
+  {
+    "id": 2,
+    "nome": "Ruby Essence Sword",
+    "arquivo": "ruby_essence_sword.glb"
+  },
+  {
+    "id": 3,
+    "nome": "Gaia's Blade",
+    "arquivo": "gaias_blade.glb"
+  },
+  {
+    "id": 4,
+    "nome": "Earth Essence Sword",
+    "arquivo": "earth_essence_sword.glb"
+  },
+  {
+    "id": 5,
+    "nome": "Abyss Ripper Sword",
+    "arquivo": "abyss_ripper_sword.glb"
+  },
+  {
+    "id": 6,
+    "nome": "Shadow Essence Sword",
+    "arquivo": "shadow_essence_sword.glb"
+  },
+  {
+    "id": 7,
+    "nome": "Esmerald Essence Sword",
+    "arquivo": "esmerald_essence_sword.glb"
+  },
+  {
+    "id": 8,
+    "nome": "Primal Toxic Axe",
+    "arquivo": "primal_toxic_axe.glb"
+  },
+  {
+    "id": 9,
+    "nome": "Nocthunder Sword",
+    "arquivo": "nocthunder_sword.glb"
+  },
+  {
+    "id": 10,
+    "nome": "Ancient Iron Sword",
+    "arquivo": "ancient_iron_sword.glb"
+  }
+]
