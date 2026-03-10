@@ -272,14 +272,21 @@ model-viewer {
         min-height: 300px; 
     }
     model-viewer {
-    height: auto;
-    aspect-ratio: 4 / 3;
-    touch-action: pan-y;
-    --interaction-prompt: 1;
-  }
-      
+        height: auto;
+        aspect-ratio: 4 / 3;
+        touch-action: pan-y;
+        interaction-prompt: 1;
+    }
+    .hero,
+    .hero-1,
+    .hero-2,
+    .divider-1,
+    .divider-2 {
+        margin: 0;
+    }
 
 }
+
 
 
 
