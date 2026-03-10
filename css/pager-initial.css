@@ -277,15 +277,9 @@ model-viewer {
         touch-action: pan-y;
         interaction-prompt: 1;
     }
-    .hero,
-    .hero-1,
-    .hero-2,
-    .divider-1,
-    .divider-2 {
-        margin: 0;
-    }
-
+    
 }
+
 
 
 
