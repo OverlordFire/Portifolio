@@ -1,47 +1,42 @@
 
 /* ===== Hero Section ===== */
-.hero {
+.hero,
+.hero-1,
+.hero-2 {
     width: 100%;
+    height: auto;         /* altura se ajustar ao conteúdo */
     min-height: 500px;
-    background-color: #205a9d;
-    display: block; /* não centraliza o container */
-    padding: 20px 0; /* espaço vertical */
+    display: block;       /* não centraliza o container */
+    padding: 20px 0;      /* espaço vertical */
     margin-top: 0;
 }
-.divider-1 {
-    position: relative;
-    width: 100%;
-    height: 70px;
-    background-color: #a156d0;
-    overflow: hidden;
-}
-
-.layered-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+.hero {
+    background-color: #205a9d;
 }
 .hero-1 {
-    width: 100%;
-    height: auto;          /* altura se ajustar ao conteúdo */
-    min-height: 500px; 
     background-color: #a156d0;
-    display: block; /* não centraliza o container */
-    padding: 20px 0; /* espaço vertical */
+}
+.hero-2 {
+    background-color: #27232a;
 }
 
+/* ===== Divider comum ===== */
+.divider-1,
 .divider-2 {
     position: relative;
     width: 100%;
     height: 70px;
-    background-color: #27232a;
     overflow: hidden;
 }
+.divider-1 {
+    background-color: #a156d0;   
+}
+.divider-2 {
+    background-color: #27232a; 
+}
 
+/* ===== Camadas dentro dos dividers ===== */
+.layered-1,
 .layered-2 {
     position: absolute;
     top: 0;
@@ -51,14 +46,10 @@
     object-fit: cover;
     pointer-events: none;
 }
-.hero-2 {
-    width: 100%;
-    height: auto;          
-    min-height: 500px; 
-    background-color: #27232a;
-    display: block; /* não centraliza o container */
-    padding: 20px 0; /* espaço vertical */
-}
+
+
+
+
 /* ===== Container / Categoria Recentes ===== */
 .container {
     background-color: #205a9d; /* fundo que envolve tudo */
@@ -83,7 +74,7 @@
     background: #ffffff1a;
     backdrop-filter: blur(10px);
     float: right; /* coloca à direita dentro do container */
-    margin-top: -3px;
+    margin-top: 2px;
 }
 
 .ver-todos:hover {
@@ -225,8 +216,9 @@ model-viewer {
 }
 
 @media screen and (max-width: 730px) {
+    /* Ajuste dos títulos e descrições */
     .container h2,
-    .container-1 h2{
+    .container-1 h2 {
         font-size: 22px;
     }
     .description {
@@ -237,63 +229,60 @@ model-viewer {
         padding: 6px 12px;
         border-radius: 6px;
     }
+
+    /* ===== Carrossel mobile - uma caixa por vez ===== */
     .model-wrapper {
-        flex-wrap: nowrap;
+        display: flex;
         overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 10px;        /* padding lateral do carrossel */
+        gap: 0;                  /* sem espaço extra */
+        width: 100%;
+        scroll-behavior: smooth;
+        margin-top: 5px;        /* espaçamento em relação ao conteúdo acima */
+        flex-wrap: nowrap;       /* evita quebra de linha */
         flex-direction: row;
-        gap: 15px;
-        padding: 3px;
     }
+
     .model,
     .jogo {
-        flex: 0 0 70%;       /* usa % para ficar proporcional à tela */
-        max-width: 90%;       /* evita ficar muito largo */
-        flex-shrink: 0;
-        padding: 10px;        /* reduz padding para mobile */
+        flex: 0 0 calc(100% - 10px); /* largura = tela - padding */
+        max-width: calc(100% - 10px);
+        scroll-snap-align: center;   /* centraliza card na tela */
+        margin: 0 10px;              /* espaçamento lateral sem quebrar padding */
         box-sizing: border-box;
+        padding: 10px;               /* padding interno do card */
     }
+
+    /* Ajuste do conteúdo interno dos cards */
     .model iframe,
-    .jogo-thumb {
-        width: 100%;           /* ocupa toda a largura do model */
-        height: auto;           /* altura automática */
-        aspect-ratio: 4 / 3;      /* mantém proporção 4:3 */
-        border: none;
+    .jogo-thumb,
+    model-viewer {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 4;
+        object-fit: cover;  /* garante que a mídia preencha o card */
         border-radius: 4px;
-        display: block;
     }
+
     .model h3,
     .jogo h3 {
-        margin-bottom: px;
+        margin-bottom: 5px;
         font-size: 15px;
     }
+
+    /* Ajuste dos heroes */
     .hero,
     .hero-1 {
         height: auto;
         min-height: 300px; 
     }
+
     model-viewer {
         height: auto;
         aspect-ratio: 4 / 3;
         touch-action: pan-y;
-        interaction-prompt: 1;
+        --interaction-prompt: 1;
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
