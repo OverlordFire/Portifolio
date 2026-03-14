@@ -17,16 +17,19 @@ fetch("./js/model.json")
 
     const container = document.getElementById("models-container");
 
-    // ordenar do mais recente para o mais antigo
     models.sort((a,b) => b.id - a.id);
 
-    // detectar qual página está aberta
     const pagina = window.location.pathname;
 
     let limite = models.length;
 
-    if (pagina === "/" || pagina.endsWith("index.html")) {
-    limite = 7;
+    const isHome =
+        pagina === "/" ||
+        pagina.endsWith("/") ||
+        pagina.includes("index.html");
+
+    if (isHome) {
+        limite = 7;
     }
 
     models.slice(0, limite).forEach(model => {
@@ -46,11 +49,9 @@ fetch("./js/model.json")
                 disable-zoom>
             </model-viewer>
         `;
-
         container.appendChild(div);
-
     });
-
+});
 
 });
 
