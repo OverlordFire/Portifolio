@@ -11,7 +11,7 @@ function menuShow() {
 
 }
 
-fetch("js/model.json")
+fetch("./js/model.json")
 .then(response => response.json())
 .then(models => {
 
