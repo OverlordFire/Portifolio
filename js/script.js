@@ -10,27 +10,20 @@ function menuShow() {
     }
 
 }
-
 fetch("js/model.json")
 .then(response => response.json())
 .then(models => {
 
     const container = document.getElementById("models-container");
 
-    models.sort((a,b) => b.id - a.id);
+    if (!container) return;
+
+    models.sort((a, b) => b.id - a.id);
 
     const pagina = window.location.pathname;
+    const isAllModelsPage = pagina.includes("TodosModelos");
 
-    let limite = models.length;
-
-    const isHome =
-        pagina === "/" ||
-        pagina.endsWith("/") ||
-        pagina.includes("index.html");
-
-    if (isHome) {
-        limite = 7;
-    }
+    const limite = isAllModelsPage ? models.length : 7;
 
     models.slice(0, limite).forEach(model => {
 
@@ -52,6 +45,3 @@ fetch("js/model.json")
         container.appendChild(div);
     });
 });
-
-});
-
