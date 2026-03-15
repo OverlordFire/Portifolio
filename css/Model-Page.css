@@ -1,3 +1,6 @@
+body {
+    --cor-secao: #205a9d; /* Aqui o divisor vai conseguir ler */
+}
 .hero {
     width: 100%;
     min-height: 700px;
