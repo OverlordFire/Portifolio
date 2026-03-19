@@ -20,7 +20,7 @@ body {
 
 .container h2 {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 50px;
     margin: 0;
 
 }
@@ -69,14 +69,14 @@ model-viewer {
         grid-template-columns: repeat(1, 1fr);
     }
     .container h2 {
-        font-size: 22px;
+        font-size: 35px;
     }
     .model h3 {
-        font-size: 14px;
+        font-size: 25px;
     }
     model-viewer {
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 4;
     }
 
 }

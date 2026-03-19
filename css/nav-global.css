@@ -121,15 +121,77 @@ header{
     object-fit: cover;
     z-index: 1;
 }
+.banner-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(13, 11, 36, 0.75) 40%, rgba(13, 11, 36, 0.2) 100%);
+    z-index: 1;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;    
+}
+.hero-text {
+    max-width: 580px;
+    color: #fff;
+    padding: 0 5%;
+}
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+.hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.btn-1,
+.btn-2 {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
 
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.btn-1:hover,
+.btn-2:hover {
+    background: #ffffff;
+    color: #205a9d;
+
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.btn-1:active,
+.btn-2:active {
+    transform: scale(0.97);
+}
 .divider {
     position: absolute;
-    left: 0;
     width: 100%;
     height: auto; 
     z-index: 2;
     object-fit: cover;
-    
 }
 
 .divider-top {
@@ -140,12 +202,12 @@ header{
 .divider-bottom {
     bottom: -1px;
     transform: rotate(180deg);
-    color: var(--cor-secao, #205a9d);
+    color: var(--cor-secao, #27232a);
 }
 @media screen and (max-width: 730px) {
     .banner-hero {
         /* Reduzimos a altura para não ocupar o celular todo */
-        height: 300px; 
+        height: 250px; 
     }
 
     .divider {
@@ -157,5 +219,32 @@ header{
     .banner {
         object-position: center;
     }
+    .hero-overlay {
+        justify-content: center;   /* centraliza horizontal */
+        text-align: center;        /* centraliza texto */
+    }
 
+    .hero-text {
+        padding: 0 5px;           /* margem lateral */
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;           /* menor pra caber */
+        line-height: 1.2;
+    }
+
+    .hero-sub {
+        font-size: 14px;
+    }
+
+    .hero-btns {
+        justify-content: center;   /* botões centralizados */
+    }
+
+    .btn-1,
+    .btn-2 {
+        font-size: 13px;
+        padding: 7px 5px;
+    }
 }
