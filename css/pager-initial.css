@@ -243,12 +243,15 @@ model-viewer {
 
     iframe,
     model-viewer,
-    .jogo-link,
     .jogo-thumb {
         aspect-ratio: 1 / 1;
         height: auto;
     }
-
+    .jogo-link {
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+    
     .hero,
     .hero-1 {
         min-height: 300px;
