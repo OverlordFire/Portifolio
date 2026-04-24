@@ -243,6 +243,7 @@ model-viewer {
 
     iframe,
     model-viewer,
+    .jogo-link,
     .jogo-thumb {
         aspect-ratio: 1 / 1;
         height: auto;
