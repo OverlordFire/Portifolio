@@ -76,7 +76,7 @@
 }
 /* JOGOS */
 .container-2 {
-    background-color: #a156d0;
+    background-color: #a561d0;
     padding: 20px;
 }
 .container-2 h2 {
@@ -106,10 +106,10 @@
 .model-wrapper {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
-    padding: 5px;
-
+    gap: 14px;
+    padding: 6px 3px;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
 }
 .model-wrapper::-webkit-scrollbar {
     display: none;
@@ -117,17 +117,19 @@
 /* ===== CARDS ===== */
 .model,
 .jogo {
-    flex: 0 0 300px;
+    flex: 0 0 19.25%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: 0.25s;
 }
 .model {
     background-color: #2d65a5;
 }
 .jogo {
-    background-color: #8a49b2;
+    background-color: #ad73d2;
 }
 /* HOVER */
 .model:hover,
@@ -146,6 +148,7 @@
 .description {
     color: rgba(255,255,255,0.7);
     font-size: 16px;
+    padding-bottom: 5px;
 }
 /* ===== MIDIA ===== */
 iframe,
@@ -167,11 +170,17 @@ model-viewer {
     overflow: hidden;
     height: 320px;
 }
-.status-badge {
+.badges {
     position: absolute;
     bottom: 10px;
     right: 10px;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px; /* 🔥 espaçamento automático */
+}
+.status-badge {
     background: #4e4e4e57;
     color: #fff;
 
@@ -180,6 +189,7 @@ model-viewer {
     font-size: 12px;
     font-weight: 600;
 }
+
 /* HOVER PLAY */
 .jogar-overlay {
     position: absolute;
@@ -251,7 +261,7 @@ model-viewer {
         aspect-ratio: 1 / 1;
         height: auto;
     }
-    
+
     .hero,
     .hero-1 {
         min-height: 300px;
