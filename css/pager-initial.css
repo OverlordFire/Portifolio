@@ -1,269 +1,370 @@
-
-/* ===== Hero Section ===== */
-.hero,
-.hero-1,
-.hero-2 {
-    width: 100%;
-    min-height: 500px;
-    padding: 20px 0;
+/* ===== SECTION BASE ===== */
+section {
+    position: relative;
 }
-/* HERO PRINCIPAL (Sobre) */
-.hero {
-    background-color: #27232a;
-    --cor-secao: #27232a;
 
+/* ===== ABOUT / SOBRE ===== */
+.hero {
+    background-color: var(--bg-surface);
+    padding: 100px 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-/* HERO MODELOS */
-.hero-1 {
-    background-color: #205a9d;
-    --cor-secao: #205a9d;
+
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+    animation: fade-up 0.7s ease both;
 }
-/* HERO JOGOS */
-.hero-2 {
-    background-color: #a156d0;
-    --cor-secao: #a156d0;
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
-/* ===== Divider comum ===== */
-.divider-1 {
-    background-color: #205a9d;
-    color: #27232a;
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    color: var(--text-primary);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 22px;
+    line-height: 1.2;
 }
-.divider-2 {
-    background-color: #a156d0;
-    color: #205a9d;
+
+.hero-texto {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto;
 }
-.layered-1,
-.layered-2 {
+/* ===== SECTION DIVIDER (visual separator) ===== */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 0;
+}
+/* ===== WAVE DIVIDERS ===== */
+.wave-divider {
+    line-height: 0;
+    overflow: hidden;
+}
+
+.wave-divider svg {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    pointer-events: none;
+    height: 70px;
 }
-/* ===== HERO TEXTO(Sobre) ===== */
-.container {
-    background-color: #27232a;
-    padding: 10px;
-    box-sizing: border-box;
+
+/* Sobre (#0f0f1e) → Modelos (#08080f): fundo é var(--bg-surface), onda cobre com var(--bg-base) */
+.wave-divider--a {
+    background-color: var(--bg-surface);
 }
-.hero-title {
-    color: #fff;
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    max-width: 800px;
+
+/* Modelos (#08080f) → Jogos (#0f0f1e): fundo é var(--bg-base), onda cobre com var(--bg-surface) */
+.wave-divider--b {
+    background-color: var(--bg-base);
 }
-.hero-texto {
-    color: rgba(255,255,255,0.8);
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 700px;
-}
-/* ===== CONTEINERS ===== */
-/* MODELOS */
-.container-1 {
-    background-color: #205a9d;
-    padding: 10px;
-}
-.container-1 h2 {
-    color: #fff;
-    font-size: 35px;
-    display: inline-block;
-}
-/* JOGOS */
-.container-2 {
-    background-color: #a156d0;
-    padding: 20px;
-}
-.container-2 h2 {
-    color: #fff;
-    font-size: 35px;
-}
-/* ===== BOTÂO "VER TODOS" ===== */
-.ver-todos {
-    float: right;
-    margin-top: 2px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: #ffffff1a;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-.ver-todos:hover {
-    background: #ffffff33;
-    transform: scale(1.05);
-    color: #ff9900;
-}
-/* ===== CARROSSEL ===== */
-.model-wrapper {
-    display: flex;
-    overflow-x: auto;
-    gap: 14px;
-    padding: 6px 3px;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-}
-.model-wrapper::-webkit-scrollbar {
+/* Legacy dividers — hide the old SVG wrappers */
+.divider-1,
+.divider-2 {
     display: none;
 }
-/* ===== CARDS ===== */
-.model,
-.jogo {
-    flex: 0 0 19.25%;
-    box-sizing: border-box;
-    scroll-snap-align: start;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.25s;
-}
-.model {
-    background-color: #2d65a5;
-}
-.jogo {
-    background-color: #ad73d2;
-}
-/* HOVER */
-.model:hover,
-.jogo:hover {
-    transform: scale(1.025);
-    box-shadow: 0 3px 10px #00000040;
-}
-/* TITULOS */
-.model h3,
-.jogo h3 {
-    color: #fff;
-    font-size: 20px;
+
+/* ===== SECTION LABEL ===== */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-bottom: 10px;
 }
-/* DESCRIÇÃO */
-.description {
-    color: rgba(255,255,255,0.7);
-    font-size: 16px;
-    padding-bottom: 5px;
+
+.section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
 }
-/* ===== MIDIA ===== */
-iframe,
-model-viewer,
-.jogo-thumb {
-    width: 100%;
-    height: 320px;
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+/* ===== MODELS SECTION ===== */
+.hero-1 {
+    background-color: var(--bg-base);
+    padding: 80px 2rem;
+}
+
+.container-1 {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container-1 > h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    display: inline-block;
+    position: relative;
+}
+
+.container-1 > h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 8px;
+}
+/* ===== GAMES SECTION ===== */
+.hero-2 {
+    background-color: var(--bg-surface);
+    padding: 80px 2rem;
+}
+.container-2 {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.container-2 h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+.container-2 h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--purple);
+    border-radius: 2px;
+    margin-top: 8px;
+}
+/* ===== VER TODOS ===== */
+.ver-todos {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-accent);
+    background: var(--accent-glow);
+    float: right;
+    margin-top: 4px;
+    transition: all 0.22s ease;
+    letter-spacing: 0.03em;
+}
+
+.ver-todos:hover {
+    background: rgba(232,160,32,0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px var(--accent-glow);
+}
+/* ===== DESCRIPTION ===== */
+.description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 10px 0 24px;
+}
+/* ===== MODEL CARDS CAROUSEL ===== */
+.model-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 0 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-card-2) transparent;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.model-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+/* Espaço no início e no fim do scroll sem cortar bordas */
+.model-wrapper > *:first-child { margin-left: 4px; }
+.model-wrapper > *:last-child  { margin-right: 4px; }
+.model-wrapper::-webkit-scrollbar-track { background: transparent; }
+.model-wrapper::-webkit-scrollbar-thumb {
+    background: var(--bg-card-2);
     border-radius: 4px;
 }
+/* ===== MODEL CARD ===== */
+.model {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.model:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-accent);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px var(--accent-glow);
+}
+.model-cta {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+}
+.model:hover .model-cta {
+    color: var(--accent);
+}
+.model h3 {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
 model-viewer {
-    background-image: url("https://i.ibb.co/WNQ18crZ/fundo-dos-modelos-3d.png");
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background-image: url("../img/fundo_dos_modelos_3d.png");
     background-size: cover;
     background-position: center;
+    --poster-color: transparent;
 }
-/* ===== JOGO OVERLAY ===== */
+/* ===== GAME CARDS ===== */
+.jogo {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.jogo:hover {
+    transform: translateY(-6px);
+    border-color: rgba(124,58,237,0.4);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px var(--purple-glow);
+}
+
+.jogo h3 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+/* ===== GAME LINK ===== */
 .jogo-link {
     position: relative;
     display: block;
     overflow: hidden;
-    height: 320px;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    height: auto;
 }
+
+.jogo-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.jogo-link:hover .jogo-thumb {
+    transform: scale(1.06);
+}
+
+/* ===== BADGES ===== */
 .badges {
     position: absolute;
     bottom: 10px;
-    right: 10px;
-
+    left: 10px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px; /* 🔥 espaçamento automático */
+    gap: 5px;
 }
+
 .status-badge {
-    background: #4e4e4e57;
-    color: #fff;
-
-    padding: 6px 12px;
+    background: rgba(8,8,15,0.75);
+    backdrop-filter: blur(8px);
+    color: var(--text-primary);
+    padding: 4px 10px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 0.72rem;
     font-weight: 600;
+    border: 1px solid var(--border);
 }
 
-/* HOVER PLAY */
+/* ===== PLAY OVERLAY ===== */
 .jogar-overlay {
     position: absolute;
     inset: 0;
-
-    background: #0000008c;
-    color: #e0d2e3;
-
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     opacity: 0;
-    transition: 0.3s;
+    transition: opacity 0.25s ease;
+    border-radius: 10px;
 }
+
 .jogo-link:hover .jogar-overlay {
     opacity: 1;
 }
-/* =========================
-   RESPONSIVO
-========================= */
-@media screen and (max-width: 730px) {
 
-    .hero-title {
-        font-size: 28px;
-        padding: 0 10px;
-    }
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .hero         { padding: 72px 1.25rem; }
+    .hero-1       { padding: 64px 1.25rem; }
+    .hero-2       { padding: 64px 1.25rem; }
 
-    .hero-texto {
-        font-size: 14px;
-        padding: 0 10px;
-    }
+    .hero-title   { font-size: 1.7rem; }
+    .hero-texto   { font-size: 0.95rem; }
 
-    .container h2,
-    .container-1 h2 {
-        font-size: 22px;
-    }
+    .model { flex: 0 0 200px; }
+    .model h3 { font-size: 0.82rem; }
+    model-viewer { height: 200px; }
 
-    .description {
-        font-size: 12px;
-    }
+    .jogo { flex: 0 0 260px; }
 
-    .ver-todos {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    .model-wrapper {
-        scroll-snap-type: x mandatory;
-        padding: 0 10px;
-        gap: 0;
-    }
-
-    .model,
-    .jogo {
-        flex: 0 0 calc(100% - 10px);
-        margin: 0 10px;
-        padding: 10px;
-        scroll-snap-align: center;
-    }
-
-    iframe,
-    model-viewer,
-    .jogo-thumb {
-        aspect-ratio: 1 / 1;
-        height: auto;
-    }
-    .jogo-link {
-        aspect-ratio: 1 / 1;
-        height: auto;
-    }
-
-    .hero,
-    .hero-1 {
-        min-height: 300px;
-    }
+    .ver-todos { float: right; margin-top: 4px; }
 }

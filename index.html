@@ -5,159 +5,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabyrione - Portifolio</title>
+    <title>Tabyrione — Portfolio 3D</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
     <link rel="stylesheet" href="css/nav-global.css">
     <link rel="stylesheet" href="css/pager-initial.css">
     <link rel="stylesheet" href="css/Footer.css">
 </head>
 
 <body>
-    <header>
+    <header id="site-header">
         <nav class="nav-bar">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo Modelos 3D" />
+                <img src="img/logo.png" alt="Tabyrione" />
             </div>
-            <div Class="nav-list">
+            <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#Modelos" class="nav-link">Modelos 3D</a></li>
+                    <li class="nav-item"><a href="#Jogos" class="nav-link">Jogos</a></li>
                     <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
             </div>
-
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()">
-                    <img class="icon" src="img/menu-mobile.svg">
+                <button onclick="menuShow()" aria-label="Abrir menu">
+                    <img class="icon" src="img/menu-mobile.svg" alt="Menu">
                 </button>
             </div>
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#inicio" class="nav-link" onclick="menuShow()">Início</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link" onclick="menuShow()">Sobre</a></li>
+                <li class="nav-item"><a href="#Modelos" class="nav-link" onclick="menuShow()">Modelos 3D</a></li>
+                <li class="nav-item"><a href="#Jogos" class="nav-link" onclick="menuShow()">Jogos</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link" onclick="menuShow()">Contato</a></li>
             </ul>
         </div>
-
     </header>
-    <section class="banner-hero">
-    <svg class="divider divider-top" viewBox="0 0 1000 100">
-        <path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z" fill="currentColor"></path>
-    </svg>
 
-    <img src="img/banner.png" class="banner">
-
-    <div class="hero-overlay">
-        <div class="hero-text">
-            <h1>Mundos criados<br>vértice por vértice</h1>
-            <p class="hero-sub">Modelos 3D em Blender, armas estilizadas e protótipos de jogos.</p>
-            <div class="hero-btns">
-                <a href="#Modelos" class="btn-1">Ver Modelos 3D</a>
-                <a href="#Jogos" class="btn-2">Ver Jogos</a>
+    <!-- HERO -->
+    <section class="banner-hero" id="inicio">
+        <img src="img/banner.png" class="banner" alt="Banner">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Mundos criados<br>vértice por vértice</h1>
+                <p class="hero-sub">Modelos 3D em Blender, armas estilizadas e protótipos de jogos feitos com paixão.</p>
+                <div class="hero-btns">
+                    <a href="#Modelos" class="btn-1">Ver Modelos 3D</a>
+                    <a href="#Jogos" class="btn-2">Ver Jogos</a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <svg class="divider divider-bottom" viewBox="0 0 1000 100">
-        <path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z" 
-        fill="currentColor"></path>
-    </svg>
     </section>
-    <main>
-        <section class="hero" id="sobre">
-            <div class="container" >
-                <h1 class="hero-title">Criando Modelos 3D & Experiências Interativas</h1>
 
+    <main>
+        <!-- SOBRE -->
+        <section class="hero" id="sobre">
+            <div class="container">
+                <span class="section-tag">Sobre mim</span>
+                <h1 class="hero-title">Criando Modelos 3D &amp;<br>Experiências Interativas</h1>
                 <p class="hero-texto">
                     Desenvolvimento de modelos 3D estilizados, jogos e sistemas interativos,
                     combinando design criativo com programação para dar vida a ideias digitais.
-                    Cada projeto é uma evolução, buscando sempre mais qualidade, detalhe e imersão.
+                    Cada projeto é uma evolução — buscando sempre mais qualidade, detalhe e imersão.
                 </p>
             </div>
         </section>
-        <div class="divider-1">
-            <svg viewBox="0 0 1000 100" class="layered-1">
-                <path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z"
-                    fill="currentColor"></path>
+
+        <!-- Divisor: Sobre → Modelos -->
+        <div class="wave-divider wave-divider--a">
+            <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="var(--bg-base)"/>
             </svg>
         </div>
+        <!-- MODELOS 3D -->
         <section class="hero-1">
             <div class="container-1" id="Modelos">
                 <h2>Modelos 3D</h2>
-                <a href="TodosModelos.html" class="ver-todos">Ver todos</a>
-                <p class="description">Modelos 3D de espadas, armas e assets estilizados.</p>
-                <div class="model-wrapper" id="models-container">
+                <a href="TodosModelos.html" class="ver-todos">Ver todos →</a>
+                <p class="description">Espadas, armas e assets estilizados modelados no Blender.</p>
+                <div class="model-wrapper" id="models-container"></div>
+            </div>
+        </section>
+
+         <!-- Divisor: Modelos → Jogos -->
+        <div class="wave-divider wave-divider--b">
+            <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="var(--bg-surface)"/>
+            </svg>
+        </div>
+
+        <!-- JOGOS -->
+        <section class="hero-2" id="Jogos">
+            <div class="container-2">
+                <h2>Jogos &amp; Protótipos</h2>
+                <p class="description">Pequenos jogos e protótipos criados para estudo de programação e design de gameplay.</p>
+                <div class="model-wrapper">
+                    <div class="jogo">
+                        <h3>Math Adventure</h3>
+                        <a href="https://scratch.mit.edu/projects/1236525480/" target="_blank" rel="noopener" class="jogo-link">
+                            <img src="img/Números.png" alt="Math Adventure" class="jogo-thumb">
+                            <div class="badges">
+                                <span class="status-badge">PC · Mobile</span>
+                                <span class="status-badge">✓ Concluído</span>
+                            </div>
+                            <span class="jogar-overlay">▶ JOGAR</span>
+                        </a>
+                    </div>
+                    <div class="jogo">
+                        <h3>TurnBall Arena</h3>
+                        <a href="https://overlordfire.github.io/Gamer_TurnBall_Arena/" target="_blank" rel="noopener" class="jogo-link">
+                            <img src="img/BALLTURN.png" alt="TurnBall Arena" class="jogo-thumb">
+                            <div class="badges">
+                                <span class="status-badge">PC</span>
+                                <span class="status-badge">⚙ Em Desenvolvimento</span>
+                            </div>
+                            <span class="jogar-overlay">▶ JOGAR</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        <div class="divider-2">
-            <svg viewBox="0 0 1000 100" class="layered-2">
-                <path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z"
-                    fill="currentColor"></path>
-            </svg>
-        </div>
-        <section class="hero-2">
-            <div class="container-2" id="Jogos">
-                <h2>Jogos & Protótipos</h2>
-                <p class="description">Pequenos jogos e protótipos criados para estudo de programação e design de
-                    gameplay.</p>
-                <div class="model-wrapper">
-                    <div class="jogo">
-                        <h3 class="auto-title">Math Adventure</h3>
-
-                        <a href="https://scratch.mit.edu/projects/1236525480/" target="_blank" class="jogo-link">
-                            <img src="img/Números.png" alt="Jogo Scratch" class="jogo-thumb">
-                            <div class="badges">
-                                <span class="status-badge">PC | Mobile</span>
-                                <span class="status-badge">Concluído</span>
-                            </div>
-                            <span class="jogar-overlay">▶ JOGAR</span>
-                        </a>
-                    </div>
-                    <div class="jogo">
-                        <h3 class="auto-title">TurnBall Arena</h3>
-
-                        <a href="https://overlordfire.github.io/Gamer_TurnBall_Arena/" target="_blank"
-                            class="jogo-link">
-                            <img src="img/BALLTURN.png" alt="Jogo Scratch" class="jogo-thumb">
-                            <div class="badges">
-                                <span class="status-badge">Pc</span>
-                                <span class="status-badge">Em Desenvolvimento</span>
-                            </div>
-                            <span class="jogar-overlay">▶ JOGAR</span>
-                        </a>
-                    </div>
-
-                </div>
-        </Section>
     </main>
+
+    <!-- FOOTER -->
     <footer id="contato">
         <div class="footer-inner">
             <div class="footer-brand">
-                <img src="img/logo.png" alt="Logo Abyrion" class="footer-logo">
+                <img src="img/logo.png" alt="Tabyrione" class="footer-logo">
                 <p>Criando mundos, um vértice de cada vez.</p>
             </div>
             <div class="footer-links">
                 <h4>Navegação</h4>
                 <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#Modelos">Modelos 3D</a></li>
                     <li><a href="#Jogos">Jogos</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Projetos</h4>
                 <ul>
                     <li><a href="TodosModelos.html">Todos os Modelos</a></li>
-                    <li><a href="https://scratch.mit.edu/projects/1236525480/" target="_blank">Math Adventure</a></li>
-                    <li><a href="https://overlordfire.github.io/Gamer_TurnBall_Arena/" target="_blank">TurnBall Arena</a></li>
+                    <li><a href="https://scratch.mit.edu/projects/1236525480/" target="_blank" rel="noopener">Math Adventure</a></li>
+                    <li><a href="https://overlordfire.github.io/Gamer_TurnBall_Arena/" target="_blank" rel="noopener">TurnBall Arena</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 TabyrioneDEV. Todos os direitos reservados.</p>
+            <p>© 2025 TabyrioneDEV — Todos os direitos reservados.</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
