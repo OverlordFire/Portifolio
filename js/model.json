@@ -48,5 +48,20 @@
     "id": 10,
     "nome": "Ancient Iron Sword",
     "arquivo": "ancient_iron_sword.glb"
+  },
+  {
+    "id": 11,
+    "nome": "Dual Soul Blades",
+    "arquivo": "dual_soul_blades.glb"
+  },
+  {
+    "id": 12,
+    "nome": "Primordial Igneous Axe",
+    "arquivo": "primordial_igneous_axe.glb"
+  },
+  {
+    "id": 13,
+    "nome": "Primordial Frost Axe",
+    "arquivo": "primordial_frost_axe.glb"
   }
 ]
